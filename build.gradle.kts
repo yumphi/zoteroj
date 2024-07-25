@@ -7,13 +7,21 @@ repositories {
 }
 
 kotlin {
-    linuxX64("native") {
+    macosX64 {
         binaries {
             executable()
         }
     }
-    // TODO: ...
-    // macosX64("native") {}
+    linuxX64 {
+        binaries {
+            executable()
+        }
+    }
+    mingwX64 {
+        binaries {
+            executable()
+        }
+    }
 }
 
 tasks.withType<Wrapper> {
